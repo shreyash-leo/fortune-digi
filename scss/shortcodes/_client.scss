@@ -1,0 +1,175 @@
+/*****************************
+	Client
+*****************************/
+.client-reviews {
+	gap: 20px;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+
+	.client-profile {
+		list-style-type: none;
+		display: flex;
+		padding: 0;
+		margin: 0;
+
+		li {
+			width: 58px;
+			height: 58px;
+			flex: 0 0 58px;
+			margin-left: -15px;
+			border-radius: 100%;
+			border: 2px solid $white;
+
+			&:first-child {
+				margin-left: 0px;
+			}
+
+			img {
+				border-radius: 100%;
+			}
+		}
+	}
+
+	.reviews {
+		display: flex;
+		flex-wrap: wrap;
+		margin-top: 0px;
+		justify-content: center;
+		flex-direction: column;
+
+		.reviews-number {
+			font-size: 26px;
+			font-weight: 600;
+			line-height: 36px;
+			color: $primary;
+		}
+
+		span {
+			color: $white;
+			font-size: 16px;
+			line-height: 30px;
+		}
+	}
+}
+
+.client-inner-section {
+	padding: 70px 0;
+	display: flex;
+	gap: 50px;
+	align-items: center;
+
+	.trusted-client {
+		text-align: left;
+		width: 20%;
+		flex-shrink: 0;
+		margin-bottom: 0;
+		padding-right: 100px;
+		border-right: 1px solid rgba($white, 0.07);
+	}
+
+	.client-logos {
+		width: calc(80% - 50px);
+	}
+}
+
+.client-logo-section{
+	&:has(.trusted-client){
+		margin-top: 30px;
+	}
+}
+
+.trusted-client{
+	font-size: 20px;
+	font-family: $font-hedding;
+	font-weight: 600;
+	line-height: 32px;
+	margin-bottom: 40px;
+	display: block;
+	text-align: center;
+}
+
+/*****************************
+	Responsive
+*****************************/
+@media (max-width: 1399px) {
+	.client-inner-section {
+		.trusted-client {
+			padding-right: 60px;
+		}
+	}
+}
+
+@media (max-width: 1199px) {
+	.clients{
+		padding: 50px 0;
+
+		.client-logos {
+			margin-top: 30px;
+		}
+	}
+
+	.client-inner-section {
+		padding: 50px 0;
+		gap: 30px;
+
+		.trusted-client {
+			padding-right: 30px;
+		}
+
+		.client-logos {
+			width: calc(80% - 30px);
+		}
+	}
+}
+
+@media (max-width: 991px) {
+	.clients {
+		gap: 20px;
+		padding: 30px 0;
+	}
+}
+
+@media (max-width: 767px) {
+	.clients {
+		flex-direction: column;
+		padding-bottom:0px;
+
+		.client-logos {
+			width: 100%;
+			margin-top: 0px;
+		}
+	}
+
+	.client-inner-section {
+	    flex-direction: column;
+
+	    .trusted-client {
+		    width: 100%;
+		    border: none;
+		    padding-right: 0;
+		    text-align: center;
+		}
+
+		.client-logos {
+			width: 100%;
+		}
+	}
+}
+
+@media (max-width: 575px) {
+	.client-reviews {
+		.client-profile {
+			li {
+				width: 45px;
+				height: 45px;
+				flex: 0 0 45px;
+			}
+		}
+	}
+
+	.client-inner-section {
+		padding: 35px 0;
+		gap: 25px;
+	}
+}

@@ -1,0 +1,59 @@
+// Font family
+$font-base: 			"Jost", sans-serif;
+$font-hedding: 			"Bai Jamjuree", serif;
+$font-menu:				"Jost", sans-serif;
+
+// Colors
+$body-bg-color: 			#000f22; // body BG
+$body-color: 				#ced0df; // body-text
+$primary:    				#23a455;
+$secondary:					#07192f;
+$white:		   				#ffffff;
+$dark-color:			 	#000f22;
+$gray-1:			 		#f6f6f6; 	// bg light
+$gray-2:			 		#dfdfdf;
+$gray-3:			 		#ced0df;
+$gray-4:			 		#212121;
+$gray-5:			 		#838383;
+$gray-6:			 		#e8e8e8;
+$black: 	 	 			#000000;
+$social: 	 	 			#8F91AB;
+
+$gradient-1: 	 	 		#23a455;
+$gradient-2: 	 	 		#5CC4A1;
+
+
+// Border color
+$border-color: 				rgba(255, 255, 255, 0.07);
+$border-color-1: 			rgba(255, 255, 255, 0.1);
+$border-color-05: 			rgba(255, 255, 255, 0.05);
+$border-color-15:			rgba(255, 255, 255, 0.15);
+
+// For button and input border radius
+$radius-3: 3px;
+$radius-4: 4px;
+$radius-5: 5px;
+$radius-6: 6px;
+$radius-8: 8px;
+$radius-10: 10px;
+$radius-15: 15px;
+$radius-20: 20px;
+$radius-25: 25px;
+$radius-30: 30px;
+$radius-50: 50px;
+$radius-80: 80px;
+$radius-100: 100%;
+
+// Box shadow sizes
+$box-shadow         : 2px 2px 4px 0px rgba(2, 45, 98, 0.1);
+$boxshadow-lg       : 5px 5px 24px 0px rgba(2, 45, 98, 0.1);
+
+
+/*Transition*/
+
+$transition:   all 0.25s ease-in-out;
+$transition-1: all 0.1s ease-in-out;
+$transition-2: all 0.2s ease-in-out;
+$transition-3: all 0.3s ease-in-out;
+$transition-4: all 0.4s ease-in-out;
+$transition-5: all 0.5s ease-in-out;

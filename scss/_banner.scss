@@ -1,0 +1,655 @@
+/*****************************
+	Site Banner
+*****************************/
+
+/*-----------------------------------*/
+/* Main Banner 1 */
+/*-----------------------------------*/
+.main-banner-1 {
+	overflow: hidden;
+	position: relative;
+	height: 800px;
+
+	&:before{
+		position: absolute;
+		content: "";
+		left: 0;
+		top: 0;
+		height: 100%;
+		width: 100%;
+		background: rgb(35,164,85);
+		background: linear-gradient(20deg, rgba(35,164,85,1) 10%, rgba(0,38,27,0.02) 65%);
+		z-index: 2;
+	}
+	.kenburnsy {
+	    position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		width:100%;
+		height:100%;
+
+	.slide {
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		background-position: center center;
+		background-size: cover;
+		background-repeat: no-repeat;
+		transform-origin: center;
+	}
+  }
+
+	.banner-slide{
+		position: absolute;
+		z-index: 1;
+		width: 100%;
+		height: 100%;
+
+		.swiper-container{
+			height: 100%;
+
+			.swiper-slide{
+				width: 100% !important;
+			}
+		}
+	}
+
+	.widget-social {
+		flex-wrap: nowrap;
+		position: absolute;
+		right: 90px;
+		z-index: 3;
+		top: 50%;
+    	transform: translateY(-50%) rotate(180deg);
+
+    	.follow-title {
+    		font-size: 20px;
+    	}
+
+    	ul.social-icon {
+    		li {
+    			a {
+    				font-size: 20px;
+    			}
+    		}
+    	}
+	}
+
+	.banner-content{
+		position: relative;
+		width: 70%;
+		z-index: 3;
+
+		h1{
+			font-size: 90px;
+			text-transform: capitalize;
+			line-height: 1.1em;
+			color: $white;
+			margin-bottom: 44px;
+			margin-bottom: 15px;
+		}
+
+		.description{
+			color: $white;
+			font-size: 18px;
+			line-height: 34px;
+			margin-bottom: 40px;
+			width: 70%;
+		}
+		
+		.banner-info{
+			display: flex;
+			gap:30px;
+
+			.call-center-box{
+				a{
+					font-size: 22px;
+					line-height: 32px;
+					font-family: $font-hedding;
+					font-weight: 600;
+					color: $white;
+				}
+			}
+		}
+	}
+
+	.banner-bg-bottom{
+		position: absolute;
+		bottom: -5px;
+		left: 0;
+		right: 0;
+		transform: rotate(180deg);
+		z-index: 3;
+
+		svg{
+			height: 30px;
+			display: block;
+			left: 50%;
+			position: relative;
+			transform: translateX(-50%);
+
+			path{
+				fill:  $body-bg-color;
+			}
+		}
+	}
+}
+
+
+
+/*-----------------------------------*/
+/* Main Banner 2 */
+/*-----------------------------------*/
+.main-banner.main-banner-2{
+	padding:0px 25px;
+
+	.banner-conent{
+		overflow: hidden;
+		position: relative;
+		padding: 150px 110px;
+		border-radius: $radius-25;
+		z-index: 1;
+		background-color: $secondary;
+
+		.sub-title{
+			gap: 10px;
+			display: flex;
+			color: $primary;
+			font-size: 16px;
+			font-weight: 600;
+			align-items: center;
+			margin-bottom: 15px;
+			text-transform: uppercase;
+			font-family: $font-hedding;
+		}
+
+		.title{
+			font-size: 72px;
+			font-weight: 600;
+			line-height: 86px;
+			margin-bottom: 15px;
+		}
+
+		.reviews-info{
+			gap: 30px;
+			display: flex;
+			margin-top: 35px;
+			align-items: center;
+
+			.btn{
+				padding: 16px 50px;
+			}
+		}
+
+		.banner-shape{
+			right: 0;
+			bottom: 0;
+			opacity: 0.08;
+			position: absolute;
+			z-index: -1;
+		}
+	}
+}
+
+/*-----------------------------------*/
+/* Inner Banner */
+/*-----------------------------------*/
+.inner-banner {
+	z-index: 5;
+	height: 450px;
+	display: flex;
+	overflow: hidden;
+	text-align: center;
+	align-items: center;
+	position: relative;
+	justify-content: center;
+	background-position: inherit;
+
+	&:before {
+		position: absolute;
+		content: "";
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba($primary, 0.85);
+		z-index: -1;
+	}
+
+	.title {
+		margin-bottom: 20px;
+	}
+}
+
+.rotate {
+	-webkit-animation: rotate 50s normal linear infinite;
+	animation: rotate 50s normal linear infinite;
+}
+
+@keyframes rotate {
+	0% {
+		-webkit-transform: rotate3d(0, 0, 1, 0deg);
+		transform: rotate3d(0, 0, 1, 0deg);
+	}
+	25% {
+		-webkit-transform: rotate3d(0, 0, 1, 90deg);
+		transform: rotate3d(0, 0, 1, 90deg);
+	}
+	50% {
+		-webkit-transform: rotate3d(0, 0, 1, 180deg);
+		transform: rotate3d(0, 0, 1, 180deg);
+	}
+	75% {
+		-webkit-transform: rotate3d(0, 0, 1, 270deg);
+		transform: rotate3d(0, 0, 1, 270deg);
+	}
+	100% {
+		-webkit-transform: rotate3d(0, 0, 1, 360deg);
+		transform: rotate3d(0, 0, 1, 360deg);
+	}
+}
+
+
+/*------------------------------*/
+/* Responsive CSS */
+/*------------------------------*/
+
+@media (max-width: 1699px) {
+ .main-banner.main-banner-2 {
+		.banner-conent{
+			padding: 140px 90px;
+		}
+	}
+}
+
+
+@media (max-width: 1599px) {
+
+	/* Main Banner 1 ----------*/
+	.main-banner-1 {
+		height: 870px;
+
+		.banner-title{
+			font-size: 300px;
+			line-height: 320px;
+			margin-bottom: 0px;
+		}
+	}
+
+	/* Main Banner 2 ----------*/
+ .main-banner.main-banner-2 {
+	.banner-conent{
+		padding: 120px 65px;
+
+		.title{
+			 font-size: 60px;
+			 line-height: 70px;
+			}
+
+			.reviews-info {
+				gap: 20px;
+
+				.btn{
+					padding: 16px 30px;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 1399px) {
+
+	/* Main Banner 1 ----------*/
+	.main-banner-1 {
+		.banner-content{
+			width: 74%;
+			.title{
+			  font-size: 72px;
+			}
+		}
+	} 
+
+	/* Main Banner 2 ----------*/
+	.main-banner.main-banner-2 {
+		.banner-conent{
+			padding: 85px 40px;
+
+			.title{
+				font-size: 56px;
+				line-height: 65px;
+			}
+
+			.reviews-info {
+				gap: 35px;
+
+				.btn{
+					padding: 16px 30px;
+				}
+
+				.client-reviews{
+					gap: 10px;
+
+					.client-profile {
+						li{
+							width: 50px;
+							height: 50px;
+							flex: 0 0 50px;
+							margin-left: -20px;
+
+							&:first-child {
+								margin-left: 0;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 1199px) {
+
+	/* Main Banner 1 ----------*/
+	.main-banner-1 {
+		height: 700px;
+
+		.widget-social {
+			right: 20px;
+		}
+
+		.banner-title{
+			font-size: 190px;
+			line-height: 210px;
+		}
+
+		.banner-content{
+			width: 85%;
+			padding-left: 0px;
+
+			.title {
+				font-size: 70px;
+			}
+		}
+	} 
+
+	/* Main Banner 2 ----------*/
+	.main-banner.main-banner-2 {
+		.banner-conent {
+			padding: 50px 30px;
+
+			.sub-title {
+				margin-bottom: 10px;
+			}
+
+			.title {
+				font-size: 42px;
+				line-height: 50px;
+			}
+
+			.reviews-info {
+				gap: 30px;
+				margin-top: 15px;
+			}
+		}
+	}
+
+	.inner-banner {
+		height: 400px;
+	}
+}
+
+@media (max-width: 991px) {
+
+	/* Main Banner 1 ----------*/
+	.main-banner-1 {
+		height: 600px;
+
+		.banner-content{
+			width: 90%;
+
+			.title {
+				font-size: 60px;
+			}
+
+			.description {
+				margin-bottom: 30px;
+				width: 80%;
+			}
+		}
+	} 
+
+	/* Main Banner 2 ----------*/
+
+	.main-banner.main-banner-2 {
+		padding: 0px;
+
+		.banner-conent{
+			padding: 60px;
+
+			.title {
+				font-size: 48px;
+				line-height: 58px;
+			}
+		}
+
+		.banner-bg{
+			margin-top: 30px;
+			height: 230px !important;
+		}
+	}
+
+	.inner-banner {
+		height: 300px;
+
+		.title {
+			font-size: 52px;
+			margin-bottom: 10px;
+		}
+	}
+}
+
+@media (max-width: 767px) {
+
+	/* Main Banner 1 ----------*/
+	.main-banner-1 {
+		height: 500px;
+
+		.widget-social {
+			right: 12px;
+		}
+
+		.banner-content{
+			width: 90%;
+
+			.title {
+				font-size: 42px;
+			}
+
+			.description {
+				margin-bottom: 25px;
+				width: 90%;
+				display: -webkit-box;
+				-webkit-line-clamp: 4;
+				-webkit-box-orient: vertical;  
+				overflow: hidden;
+			}
+
+			.banner-info {
+				gap: 15px 30px;
+				flex-wrap: wrap;
+
+				.get-started-btn {
+					.btn {
+						font-size: 16px;
+						line-height: 28px;
+						padding: 12px 35px;
+					}
+				}
+			}
+		}
+	}
+
+	/* Main Banner 2 ----------*/
+	.main-banner.main-banner-2  {
+		.banner-conent  {
+			padding: 40px;
+		}
+
+		.banner-bg{
+			height: 200px !important;
+		}
+	}
+
+	.inner-banner {
+		height: 250px;
+
+		.title {
+			font-size: 42px;
+		}
+	}
+}
+
+@media (max-width: 575px) {
+
+	/* Main Banner 1 ----------*/
+	.main-banner-1 {
+		.widget-social {
+			display: none;
+		}
+
+		.banner-content {
+			width: 100%;
+
+			.title {
+				font-size: 28px;
+				line-height: 38px;
+			}
+
+			.description {
+				margin-bottom: 15px;
+				width: 100%;
+				line-height: 28px;
+			}
+
+			.banner-info {
+				gap: 10px 30px;
+				flex-wrap: wrap;
+
+				.call-center-box {
+					gap: 10px;
+
+					a {
+						font-size: 20px;
+						line-height: 30px;
+					}
+
+					.call-icon {
+						height: 40px;
+						width: 40px;
+						flex: 0 0 40px;
+
+						i {
+							font-size: 14px;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	/* Main Banner 2 ----------*/
+	.main-banner.main-banner-2  {
+		.banner-conent  {
+			padding: 25px;
+
+			.title{
+				font-size: 40px;
+				line-height: 52px;
+			}
+
+			.reviews-info{
+				gap: 20px;
+				flex-wrap: wrap;
+
+				.client-reviews{
+					margin-left: 20px;
+				}
+			}
+		}
+
+		.banner-bg{
+			height: 180px !important;
+		}
+	}
+
+	.inner-banner {
+		.title {
+			font-size: 30px;
+			line-height: 40px;
+			margin-bottom: 5px;
+		}
+	}
+}
+
+@media (max-width: 479px) {
+	/* Main Banner 1 ----------*/ 
+	.main-banner-1 .banner-title {
+		font-size: 70px;
+		line-height: 90px;
+	}
+
+	/* Main Banner 2 ----------*/
+	.main-banner.main-banner-2  {
+		.banner-conent  {
+			.title{
+				font-size: 27px;
+				line-height: 40px;
+			}
+
+			.reviews-info{
+				gap: 20px;
+				flex-wrap: wrap;
+				margin-top: 25px;
+
+				.btn{
+					padding: 12px 30px;
+				}
+				
+				.client-reviews{
+					gap: 15px;
+					flex-wrap: wrap;
+					margin-left: 0px;
+
+					.client-profile {
+						li{
+							width: 40px;
+							height: 40px;
+							flex: 0 0 40px;
+							margin-left: -15px;
+
+							&:first-child{
+								margin-left: 0px;
+							}
+						}
+					}
+
+					.reviews{
+						.reviews-number {
+							font-size: 22px;
+							line-height: 30px;
+						}
+					}
+				}
+			}
+		}
+
+		.banner-bg{
+			margin-top: 20px;
+			height: 150px !important;
+		}
+	}
+}

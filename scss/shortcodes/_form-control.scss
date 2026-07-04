@@ -1,0 +1,124 @@
+/*****************************
+  Form Control
+*****************************/
+form {
+	.form-control {
+		position: relative;
+		font-size: 18px;
+		line-height: 30px;
+		border-radius: 0px;
+		padding: 15px 0px;
+		border: none;
+		background: transparent;
+		border-bottom: 1px solid rgba($white,0.07);
+		color: $white;
+		margin-bottom: 15px;
+
+		&::-ms-input-placeholder { 
+		  color: $body-color;
+		}
+
+		&::placeholder {
+		  color: $body-color;
+		}
+
+		&:focus {
+	  	color: $white;
+    	box-shadow: none;
+    	border-color: $primary;
+			background: transparent;
+	  }
+	}
+
+	textarea {
+		&.form-control {
+			margin-bottom: 30px;
+
+			&.pre-textarea {
+				margin-bottom: 15px;
+			}
+		}
+	}
+
+	&.form-style-border {
+		.form-control {
+			padding: 15px 20px;
+			border-radius: $radius-5;
+			border: 1px solid rgba($white,0.07);
+
+			&:focus {
+	    	border-color:$primary;
+	    }
+		}
+	}
+
+	&.form-style-fill {
+		.form-control {
+			padding: 15px 20px;
+			border-radius: $radius-5;
+			background-color: $white;
+			color: $secondary;
+			border: none;
+
+			&::-ms-input-placeholder { 
+			  color: $gray-5;
+			}
+
+			&::placeholder {
+			  color: $gray-5;
+			}
+
+			&:focus {
+	    	border-color: transparent;
+	    }
+		}
+	}
+}
+
+.form-check {
+	padding-left: 0;
+	min-height: auto;
+	margin-bottom: 0;
+	display: flex;
+	gap: 10px;
+
+	.form-check-input {
+		float: none;
+		width: 20px;
+		height: 20px;
+		margin: 0;
+		margin-top: 5px;
+		border: 2px solid $border-color;
+	}
+}
+
+.form-check .form-check-input:checked {
+	background-color: $primary;
+}
+
+input[type="search"]::-webkit-search-cancel-button {
+  margin-left: 10px;
+}
+
+/*****************************
+	Responsive
+*****************************/
+@media (max-width: 575px) {
+	form {
+		.form-control {
+			padding: 10px 0px;
+		}
+
+		&.form-style-border {
+			.form-control {
+				padding: 10px 15px;
+			}
+		}
+
+		&.form-style-fill {
+			.form-control {
+				padding: 10px 15px;
+			}
+		}
+	}
+}

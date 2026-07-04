@@ -1,0 +1,216 @@
+/*****************************
+	Action-box
+*****************************/
+.action-box {
+	position: relative;
+	height: 100%;
+	padding: 50px;
+	background-color: $primary;
+	border-radius: $radius-25;
+
+	.action-box-content {
+		margin-top: 40px;
+		padding-top: 40px;
+		border-top: 1px solid rgba($white, 0.2);
+
+		.counter {
+			border-bottom: none;
+			
+			&:before {
+				display: none;
+			}
+
+			.counter-number {
+				.timer {
+					font-size: 74px;
+					line-height: 74px;
+					margin-bottom: 10px;
+				}
+			}
+		}
+
+		p {
+			color: $white;
+			margin-bottom: 0;
+		}
+	}
+
+	/* Action box Style 02	*/
+	&.action-box-style-02 {
+		z-index: 2;
+		border-radius: $radius-15;
+		padding: 150px 45px 60px;
+
+		.action-box-content{
+			padding-top: 0;
+			margin-top: 0;
+			border-top: none;
+
+			.title{
+				font-family: $font-hedding;
+		    font-size: 36px;
+		    font-weight: 700;
+		    text-transform: capitalize;
+		    line-height: 44px;
+		    color: $white;
+		    margin-bottom: 20px;
+			}
+
+			.description{
+				margin-bottom: 30px;
+				color: $white;
+			}
+		}
+
+		&:before{
+			position: absolute;
+			content: "";
+			border-radius: $radius-15;
+			background: linear-gradient(180deg, rgba($primary,0.1) 0%, rgba($primary,1) 100%);
+			height: 100%;
+			width: 100%;
+			left: 0;
+			top: 0;
+			z-index: -1;
+		}
+	}
+
+	/* Action box Style 03 */
+	&.action-box-style-03 {
+		border-radius: $radius-10;
+		padding: 50px 45px;
+		border: 1px solid rgba($gray-5, 0.25);
+		background-color: transparent;
+
+		&:before {
+			content: "";
+			height: 100%;
+			width: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+			opacity: 0.4;
+			background-image: url(../images/bg/action-box-bg.png);
+			border-radius: $radius-10;
+			background-size: cover;
+			background-repeat: no-repeat;
+			z-index: -1;
+		}
+
+		.action-box-content {
+			margin-top: 0;
+			padding-top: 0;
+			border-top: none;
+
+			.description {
+				margin-top: 25px;
+				margin-bottom: 0;
+			}
+
+			.contact-details {
+				padding: 0;
+				margin-bottom: 0;
+				margin-top: 30px;
+				display: flex;
+				flex-direction: column;
+				gap: 12px;
+
+				.contact-info {
+					display: flex;
+					align-items: center;
+					gap: 10px;
+
+					a {
+						&:hover {
+							color: $primary;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+
+/*****************************
+	Responsive
+*****************************/
+@media (max-width: 1399px) {
+  .action-box {
+		padding: 50px 30px;
+
+		.action-box-content {
+			margin-top: 30px;
+			padding-top: 30px;
+		}
+
+		&.action-box-style-03 {
+	    padding: 30px;
+		}
+	}
+}
+
+@media (max-width: 1199px) {
+  .action-box {
+		.action-box-content {
+			margin-top: 15px;
+			padding-top: 15px;
+		}
+
+		&.action-box-style-03 {
+      padding: 30px 20px;
+
+      .action-box-content {
+      	.description {
+			    margin-top: 15px;
+			  }
+			}
+    }
+	}
+}
+
+
+@media (max-width: 991px) {
+	.action-box {
+		&.action-box-style-02{
+			padding: 100px 20px 30px;
+
+			.action-box-content{
+				.title{
+					font-size: 28px;
+			    line-height: 38px;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 575px) {
+  .action-box {
+  	padding: 40px 20px;
+
+  	.action-box-content {
+  		.counter {
+  			.counter-number {
+  				.timer {
+  					font-size: 54px;
+				    line-height: 54px;
+  				}
+  			}
+  		}
+  	}
+  }
+
+  .action-box {
+	  &.action-box-style-02{
+			padding: 80px 15px 30px;
+
+			.action-box-content{
+				.title{
+					font-size: 24px;
+			    line-height: 36px;
+				}
+			} 
+		}
+	}
+}

@@ -1,0 +1,163 @@
+/*****************************
+	Info box
+*****************************/
+.infobox-wrapper {
+	&.grid-wrapper {
+		grid-gap: 40px;
+	}
+}
+
+.infobox {
+	padding: 40px;
+	border-radius: $radius-20;
+	background-color:$secondary;
+
+	.infobox-info {
+		padding-bottom: 25px;
+		margin-bottom: 25px;
+		border-bottom: 1px solid $border-color;
+		display: flex;
+		gap: 50px;
+		justify-content: space-between;
+		
+		.infobox-title {
+			font-size: 24px;
+			line-height: 36px;
+			font-weight: 500;
+			color: $white;
+		}
+
+		.infobox-link {
+			line-height: 36px;
+			align-self: flex-start;
+
+			svg {
+				vertical-align: middle;
+			}
+		}
+	}
+	
+	.infobox-content {
+		.infobox-description {
+			line-height: 30px;
+		}
+	}
+}
+
+.icon-box-item{
+	gap: 30px;
+	display: flex;
+	padding:25px 100px 25px 0px;
+	border-bottom: 1px solid rgba($white, 0.07);
+
+	.icon{
+		width: 84px;
+		height: 84px;
+		flex: 0 0 84px;
+		display: flex;
+		border-radius: $radius-10;
+		align-items: center;
+		justify-content: center;
+		background-color: $primary;
+	}
+
+	.title{
+		margin-bottom: 5px;
+		font-weight: 600;
+	}
+
+	.description{
+		margin-bottom: 0px;
+	}
+
+	&:last-child{
+		border-bottom: none;
+		padding-bottom: 0px;
+	}
+
+	&:first-child{
+		padding-top: 0px;
+	}
+}
+
+.contact-info-box{
+	ul {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+
+		li {
+			line-height: 30px;
+			color: $body-color;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+
+			a {
+				display: inline-block;
+				line-height: normal;
+				color: $body-color;
+				font-family: $font-base;
+				font-weight: normal;
+
+				&:hover{
+					color:$primary;
+				}
+			}
+		}
+	}	
+}
+
+/*****************************
+	Responsive
+*****************************/
+@media (max-width: 1199px) {
+	.infobox-wrapper.grid-wrapper {
+		grid-gap: 24px;
+	}
+
+	.infobox{
+		padding: 40px 30px;
+
+		.infobox-info {
+			 gap: 20px;
+		}
+	} 
+
+	.icon-box-item{
+		padding: 20px 0px 20px 0px;
+	}
+}
+
+@media (max-width: 767px) {
+
+	.infobox{
+		 padding: 30px;
+
+		.infobox-info {
+			padding-bottom: 15px;
+			margin-bottom: 15px;
+			gap: 30px;
+		}
+	} 
+}
+
+@media (max-width: 575px) {
+	.infobox{
+		padding: 25px;
+	}
+
+	.icon-box-item{
+		 gap: 15px;
+
+		 .icon{
+			 	width: 70px;
+				height: 70px;
+				flex: 0 0 70px;
+		 }
+	}
+}

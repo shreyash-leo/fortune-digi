@@ -1,0 +1,564 @@
+/*****************************
+	Typography
+*****************************/
+body {
+	font-family: $font-base;
+	font-weight: normal;
+	font-style: normal;
+	font-size: 18px;
+	line-height: 30px;
+	color: $body-color;
+	overflow-x: hidden;
+	background-color: $body-bg-color;
+}
+
+a {
+	outline: medium none !important;
+	color: $primary;
+	transition: all 0.3s ease-in-out;
+	text-decoration: none;
+
+	&:focus {
+		color: $black;
+		text-decoration: none !important;
+	}
+
+	&:hover {
+		color: $black;
+		text-decoration: none !important;
+	}
+
+}
+
+a.text-dark {
+	&:focus {
+		color: $primary !important;
+	}
+	&:hover {
+		color: $primary !important;
+	}
+
+}
+
+input {
+	outline: medium none !important;
+	color: $primary;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+	font-family: $font-hedding;
+	font-weight: 700;
+	color: $white;
+	margin: 0px 0px 1rem;
+
+	a {
+		color: inherit;
+	}
+}
+
+h1 {
+	font-size: 66px;
+	font-style: normal;
+	line-height: normal;
+}
+
+h2 {
+	font-size: 60px;
+	line-height: 70px;
+}
+
+h3 {
+	font-size: 42px;
+	line-height: 52px;
+}
+
+h4 {
+	font-size: 32px;
+	line-height: 42px;
+}
+
+h5 {
+	font-size: 26px;
+	line-height: normal;
+}
+
+h6 {
+	font-size: 22px;
+	line-height: normal;
+}
+
+.bg-black h1,
+.bg-black h2,
+.bg-black h3,
+.bg-black h4,
+.bg-black h5,
+.bg-black h6,
+.bg-black .h1,
+.bg-black .h2,
+.bg-black .h3,
+.bg-black .h4,
+.bg-black .h5,
+.bg-black .h6{
+	color: $white;
+}
+
+.bg-dark h1,
+.bg-dark h2,
+.bg-dark h3,
+.bg-dark h4,
+.bg-dark h5,
+.bg-dark h6,
+.bg-dark .h1,
+.bg-dark .h2,
+.bg-dark .h3,
+.bg-dark .h4,
+.bg-dark .h5,
+.bg-dark .h6{
+	color: $white;
+}
+
+.bg-black p,
+.bg-dark p{
+	color:$body-color;
+}
+
+
+iframe { width: 100%; }
+
+label {
+	font-weight: normal;
+}
+
+*::-moz-selection {
+	background: $primary;
+	color: $white;
+	text-shadow: none;
+}
+
+::-moz-selection {
+	background: $primary;
+	color: $white;
+	text-shadow: none;
+}
+
+::selection {
+	background: $primary;
+	color: $white;
+	text-shadow: none;
+}
+
+.caption {
+	&.alignleft{
+		float: left;
+	    margin-right: 1.5em;
+	    margin-bottom: 1.5em;
+		img{
+			width: 253px;
+		}
+	}
+
+	&.alignright{
+		float: right;
+    	margin-left: 1.5em;
+    	margin-bottom: 1.5em;
+		img{
+			width: 253px;
+		}
+	}
+}
+
+.typography-section{
+	.hr{
+		border-top: 1px solid rgba($white,0.07);
+		padding-top: 80px;
+		margin-top: 80px;
+	}
+}
+
+/*figure*/
+figure.caption{
+	width:253px;
+	
+	
+	.caption-text{
+		margin: 14px 0px;
+		text-align: center;
+	}
+
+	&.alignleft{
+		float: left;
+		margin-right: 25px;
+		margin-bottom: 25px;
+	}
+
+	&.alignright{
+		float: right;
+		margin-left: 25px;
+		margin-bottom: 25px;
+	}
+}
+
+/*----------------------------------*/
+/* Container Fluid */
+/*----------------------------------*/
+@media (min-width: 1400px){
+	.container {
+		max-width: 1424px;
+	}
+}
+
+@media (max-width: 991px){
+	.container {
+		max-width: 100%;
+	}
+}
+
+/*----------------------------------*/
+/* Section Title */
+/*----------------------------------*/
+.section-title {
+	margin-bottom: 50px;
+
+	.sub-title {
+		font-size: 16px;
+		color: $primary;
+		font-weight: 600;
+		line-height: 28px;
+		margin-bottom: 20px;
+	   display: inline-block;
+	   text-transform: uppercase;
+	   font-family: $font-hedding;
+	}
+
+	.title {
+		margin-bottom: 0;
+		text-transform: capitalize;
+	}
+
+	p {
+		margin-top: 25px;
+		margin-bottom: 0;
+		color: $body-color;
+
+		&+p {
+			margin-top: 20px;
+		}
+	}
+
+	&.section-title-light {
+
+		.title {color: $white;}
+		p {color: $white;}
+	}
+
+	.btn {
+		margin-top: 30px;
+	}
+
+	.title-border {
+		padding-left: 30px;
+		border-left: 4px solid $primary;
+	}
+}
+
+/* Title in BG Dark */
+.bg-dark {
+	.section-title {
+		p {
+			color: $body-color;
+		}
+	}
+}
+
+/*----------------------------------*/
+/* Breadcrumb */
+/*----------------------------------*/
+.breadcrumb {
+	margin-top: 18px;
+	background: transparent;
+	border-radius: 0;
+	display: inline-flex;
+	padding: 14px 40px;
+	justify-content: center;
+
+	.breadcrumb-item {
+		display: inline-block;
+		font-size: 18px;
+		color: $white;
+
+		a {
+			color:  $white;
+			&:hover {color: $white;}
+		}
+
+		&:before {color: $white;}
+	}
+
+	.breadcrumb-item.active {color: $white;}
+}
+
+/*----------------------------------*/
+/* Dropcaps */
+/*----------------------------------*/
+.dropcaps{
+	.dropcap-style-1{
+		float: left;
+    	text-align: center;
+    	line-height: 1;
+    	font-size: 50px;
+		margin-right: 20px;
+		color: $white;
+
+		.drop-cap-letter{
+			font-size: 60px;
+		    font-weight: 500;
+		    display: inline-block;
+		}
+	}
+
+	.dropcap-style-2{
+		float: left;
+    	text-align: center;
+    	line-height: 1;
+    	font-size: 50px;
+    	padding: 7px;
+		margin-right: 20px;
+		margin-top: 8px;
+		background-color: $primary;
+		color: $white;
+
+		.drop-cap-letter{
+			font-size: 60px;
+		    font-weight: 500;
+		    display: inline-block;
+		    height: 60px;
+			width: 60px;
+		}
+	}
+}
+
+/*----------------------------------*/
+/* Blockquote */
+/*----------------------------------*/
+blockquote {
+	font-size: 20px;
+	line-height: 34px;
+	padding: 0px 30px;
+	margin: 0;
+	border-left: 5px solid $primary;
+	box-shadow: 0 5px 30px rgba(0, 0, 0, 0.05);
+
+	cite {
+		display: flex;
+		gap: 10px;
+		line-height: normal;
+		align-items: center;
+		color: $primary;
+
+		&:before {
+			content: "";
+			width: 30px;
+			height: 2px;
+			display: inline-block;
+			background: $primary;
+		}
+	}
+
+	.blockquote-name{
+		font-weight: 500;
+	}
+}
+
+/*Blockquote Style 1*/
+blockquote.blockquote-style-1{
+	padding: 40px 50px;
+	padding-left: 180px;
+	margin: 15px 0;
+    margin-right: 10px;
+    position: relative;
+    font-size: 18px;
+    line-height: 30px;
+    border: 1px solid rgba($white, 0.07);
+    z-index: 2;
+
+	.blockquote-content{
+		position: relative;
+
+		.quote-icon{
+			width: 100px;
+			flex: 0 0 100px;
+			margin-right: 30px;
+		}
+
+		p{
+			color: $body-color;
+			font-size: 18px;
+			line-height: 28px;
+			margin-bottom: 0;
+		}
+
+		.blockquote-author{
+			.blockquote-name{
+				color: $primary;
+			}
+		}
+	}
+
+	&:before {
+	    content: "\f10d";
+      	font-family: "Font Awesome 6 Free";
+      	font-weight: 900;
+      	position: absolute;
+      	top: 30px;
+    	left: 55px;
+    	opacity: 1;
+      	font-size: 100px;
+      	line-height: 90px;
+      	font-style: normal;
+      	color: transparent;
+      	-webkit-text-stroke: 2px $primary;
+	}
+
+
+	&:after {
+	    position: absolute;
+	    top: -10px;
+	    left: 10px;
+	    height: 100%;
+	    width: 100%;
+	    content: "";
+	    border: 1px solid rgba($white, 0.07);
+	    z-index: -1;
+	}
+}
+
+blockquote.blockquote-style-1 cite,blockquote.blockquote-style-1 p+p {
+    margin-top: 10px
+}
+
+/*===============================================*/
+/* Responsive CSS */
+/*===============================================*/
+@media (max-width: 1199px) {
+
+	h1 {font-size: 62px;}
+	h2 {font-size: 50px;	line-height: 60px;}
+}
+
+@media (max-width: 991px) {
+
+	h1 {font-size: 56px;}
+	h2 {font-size: 42px;	line-height: 52px;}
+	h3 {font-size: 36px;	line-height: 46px;}
+
+	.section-title {
+		.sub-title {
+			margin-bottom: 5px;
+		}
+
+		p {
+			margin-top: 15px;
+		}
+	}
+
+	.typography-section{
+		.hr{
+			padding-top: 60px;
+			margin-top: 60px;
+		}
+	}
+}
+
+@media (max-width: 767px) {
+	h1 {font-size: 52px;}
+	h2 {font-size: 36px;	line-height: 46px;}
+	h3 {font-size: 30px;	line-height: 42px;}
+	h4 {font-size: 28px;	line-height: normal;}
+	h5 {font-size: 24px;	line-height: normal;}
+	h6 {font-size: 20px;	line-height: normal;}
+
+	.section-title {
+		margin-bottom: 30px;
+	}
+
+	/* Breadcrumb */
+	.breadcrumb {
+		margin-top: 10px;
+	}
+
+	.typography-section{
+		.hr{
+			padding-top: 40px;
+			margin-top: 40px;
+		}
+	}
+
+	/*Blockquote Style 1*/
+	blockquote.blockquote-style-1 {
+	    padding: 30px;
+	    padding-left: 110px;
+
+	    &:before {
+		    left: 30px;
+		    font-size: 70px;
+		    line-height: 70px;
+		}
+	}
+}
+
+@media (max-width: 575px) {
+	h1 {font-size: 44px;	line-height: 54px;}
+	h2 {font-size: 30px;	line-height: 40px;}
+	h3 {font-size: 28px;	line-height: 38px;}
+	h4 {font-size: 24px;	line-height: 34px;}
+	h5 {font-size: 20px;	line-height: 30px;}
+	h6 {font-size: 18px;	line-height: 28px;}
+
+	/* Section Title */
+	.section-title {
+		.title-border {
+			padding-left: 10px;
+		}
+	}
+
+	/* Breadcrumb */
+	.breadcrumb {
+		.breadcrumb-item {
+			font-size: 16px;
+			padding-left: 5px;
+
+			&:before {
+				padding-right: 5px;
+			}
+		}
+	}
+
+	/*Blockquote Style 1*/
+	blockquote.blockquote-style-1 {
+	    padding: 20px;
+	    padding-top: 90px;
+
+	    &:before {
+		    left: 20px;
+		    top: 15px;
+		}
+	}
+
+	.typography-section{
+		.hr{
+			padding-top: 30px;
+			margin-top: 30px;
+		}
+	}
+}

@@ -1,0 +1,193 @@
+/*****************************
+	Accordion
+*****************************/
+.accordion {
+	.accordion-item {
+		border: none;
+		border-bottom: 1px solid $border-color-15;
+		background-color: inherit;
+		margin-bottom: 0px;
+
+		.accordion-header {
+			overflow: hidden;
+			border-radius: $radius-5;
+		}
+
+		.accordion-header {
+			.accordion-button {
+				font-size: 24px;
+				font-weight: 600;
+				padding: 35px 0px;
+				padding-right: 40px;
+				background-color: inherit;
+				color: $white;
+				border: 0;
+				border-radius: 0;
+
+				&:after {
+					content: "\2b";
+					background-image: inherit;
+					font-family: 'Font Awesome 5 Free';
+					font-size: 18px;
+					font-weight: 600;
+					color: $white;
+					width: 40px;
+					height: 40px;
+					border: 0;
+					position: absolute;
+					right: 0;
+					top: 50%;
+					transform: translateY(-50%);
+					padding-bottom: 0px;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+				}
+				
+				&:hover {
+					color: $primary;
+
+					&:after {
+						color: $primary;
+					}
+				}
+			}
+	
+			.accordion-button:not(.collapsed) {
+				box-shadow: inherit;
+				outline: inherit;
+				color: $primary;
+
+				&:after {
+					content: "\f068";
+					font-family: 'Font Awesome 5 Free';
+					color: $primary;
+				}
+			}
+		}
+
+		.accordion-button:focus {
+			border-color: $primary;
+			box-shadow: inherit;
+		}
+
+		.accordion-collapse {
+			.accordion-body {
+				background-color: transparent;
+				padding-top: 10px;
+				padding-right: 30px;
+				padding-bottom: 15px;
+				padding-left: 0px;
+				color: $body-color;
+				margin-bottom: 25px;
+			}
+		}
+
+		&:first-of-type{
+			border-radius: 0px;
+		}
+
+		&:last-of-type{
+			border-radius: 0px;
+		}
+
+		&:last-child{
+			margin-bottom: 0px;
+		}
+	}
+
+	&.accordion-style-pgs-two {
+		.accordion-item{
+			border: none;
+			margin-bottom: 15px;
+
+			.accordion-header {
+				.accordion-button {
+					font-size: 20px;
+					border-radius:$radius-5; 
+					border:1px solid $border-color;
+					padding: 22px 25px;
+					padding-right: 55px;
+
+					&:after {
+							right: 12px;
+					}
+
+					&:hover {
+						color: $white;
+
+						&:after {
+							color: $white;
+						}
+					}
+				}
+
+				.accordion-button:not(.collapsed) {
+					box-shadow: inherit;
+					outline: inherit;
+					color: $white;
+					background-color: $primary;
+
+
+					&:after {
+						content: "\f068";
+						font-family: 'Font Awesome 5 Free';
+						color: $white;
+					}
+				}
+			}
+
+			.accordion-collapse {
+				.accordion-body {
+					background-color: transparent;
+					padding-top: 30px;
+					padding-right: 30px;
+					padding-bottom: 15px;
+					padding-left:30px;
+					color: $body-color;
+					margin-bottom: 0px;
+				}
+			}
+		}
+	}
+}
+
+
+/*****************************
+	Responsive
+*****************************/
+@media (max-width: 991px) {
+	.accordion  {
+		.accordion-item {
+			.accordion-header {
+				.accordion-button{
+					font-size: 20px;
+					padding: 20px 20px;
+					padding-left: 0px;
+					padding-right: 35px;
+				}
+			}
+			.accordion-collapse {
+				.accordion-body{
+					padding-bottom: 0px;
+					padding-top: 0px;
+					margin-bottom: 20px;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 575px) {
+ .accordion.accordion-style-pgs-two {
+ 	.accordion-item {
+     .accordion-header {
+     	.accordion-button{
+           font-size: 18px;
+           padding: 16px 20px;
+           padding-right: 50px;
+     	}
+      }
+ 	}
+  }
+}
