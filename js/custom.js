@@ -260,7 +260,8 @@ NOTE: This file contains all scripts for the actual Template.
 		var $bgSlider = $('#bg-slider');
 		if ( $bgSlider.exists() ) {
 			$("#bg-slider").kenburnsy({
-				fullscreen: false
+				fullscreen: false,
+				height: '100%'
 			});
 		}
 	}

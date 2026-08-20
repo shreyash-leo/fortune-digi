@@ -118,7 +118,7 @@ app.post("/api/contact", async (req, res) => {
 
             from: process.env.EMAIL_USER,
 
-            to: process.env.EMAIL_USER,
+            to: process.env.CONTACT_TO || "fortechmediaandmarketing@gmail.com",
 
             subject: "New Contact Form Submission",
 

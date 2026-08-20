@@ -304,7 +304,7 @@
 	position: absolute;
 	inset: 0;
 	width: 100%;
-	height: 100%;
+	height: 100% !important;
 	z-index: 0;
 }
 
@@ -332,4 +332,19 @@
 	background: rgba(0, 0, 0, 0.35);
 	z-index: 1;
 	pointer-events: none;
+}
+
+/* Option C: Stretch/fit the entire slide image to the canvas */
+.main-banner-1 .kenburnsy .slide {
+	background-size: 100% 100% !important;
+}
+
+/* Remove red color filter from inner hero banners (all pages except home page) */
+.inner-banner:before {
+	background-color: rgba(0, 0, 0, 0.40) !important;
+	background-image: none !important;
+}
+
+.coming-soon-section:before {
+	background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.6) 100%) !important;
 }

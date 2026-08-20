@@ -18,7 +18,7 @@
           $(slide)
             .velocity({
               rotateZ: '0deg',
-              scale: '1.1'
+              scale: '1'
             }, 0)
             .velocity({
               translateZ: 0,
@@ -35,7 +35,7 @@
             .velocity({
               translateZ: 0,
               rotateZ: '0deg',
-              scale: '1.1'
+              scale: '1'
             }, duration);
         }
       };

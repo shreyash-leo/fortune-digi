@@ -588,13 +588,13 @@ blockquote.blockquote-style-1 cite, blockquote.blockquote-style-1 p + p {
 /* Ellipse Shep */
 /*------------------------------*/
 .ellipse-top {
-  background-image: url(3591cc4a5edba61f0e96.png);
+  background-image: url(3591cc4a5edba61f0e96.webp);
   background-position: center top;
   background-repeat: no-repeat;
   background-size: auto; }
 
 .ellipse-bottom {
-  background-image: url(22802f06a84d019cb83f.png);
+  background-image: url(22802f06a84d019cb83f.webp);
   background-position: center bottom;
   background-repeat: no-repeat;
   background-size: auto; }
@@ -1552,7 +1552,7 @@ section:has(.rounded-section) {
       top: 0;
       left: 0;
       opacity: 0.4;
-      background-image: url(5aa8212cb5be288a5068.png);
+      background-image: url(5aa8212cb5be288a5068.webp);
       border-radius: 10px;
       background-size: cover;
       background-repeat: no-repeat;
@@ -5466,7 +5466,7 @@ header.header.header-sticky.is-sticky {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(235, 75, 39, 0.70);
+    background-color: rgba(0, 0, 0, 0.40);
     z-index: -1; }
   .inner-banner .title {
     margin-bottom: 20px; }
@@ -6040,7 +6040,7 @@ body:has(#search.open) {
     position: absolute;
     top: 0;
     left: 0;
-    background-image: url(57d5736aac07a4bccff1.png);
+    background-image: url(57d5736aac07a4bccff1.webp);
     background-position: bottom right;
     background-repeat: no-repeat;
     opacity: 0.2;
@@ -6175,7 +6175,7 @@ body:has(#search.open) {
     top: 0;
     left: 0;
     opacity: 0.5;
-    background-image: url(8eb756dd4fc3696fa1f6.png);
+    background-image: url(8eb756dd4fc3696fa1f6.webp);
     background-size: 100% 100%;
     background-repeat: no-repeat;
     z-index: -1; }
@@ -6233,7 +6233,7 @@ body:has(#search.open) {
   height: 100vh; }
   .coming-soon-section:before {
     content: "";
-    background-image: linear-gradient(20deg, #eb4c27 15%, rgba(0, 38, 27, 0.5) 100%);
+    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.6) 100%);
     height: 100%;
     width: 100%;
     top: 0;
@@ -6277,7 +6277,7 @@ body:has(#search.open) {
     position: absolute;
     background-size: cover;
     background-repeat: no-repeat;
-    background-image: url(8eb756dd4fc3696fa1f6.png); }
+    background-image: url(8eb756dd4fc3696fa1f6.webp); }
 
 /*Home Shape line*/
 .item-efftect {
