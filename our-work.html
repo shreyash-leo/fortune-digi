@@ -424,7 +424,7 @@
                     <h2 class="title">Explore Our Complete Capabilities</h2>
                     <p>Download our detailed brochure to see the full spectrum of services, case studies, and creative approach. Everything you need to know about partnering with Fortech Media and Marketing.</p>
                   </div>
-                  <a class="download-brochure-btn wow fadeInUp" id="downloadBrochureBtn" aria-disabled="true" title="Brochure coming soon">
+                  <a href="documents/Fortech-Business-Profile.pdf" class="download-brochure-btn wow fadeInUp" id="downloadBrochureBtn" download="Fortech-Business-Profile.pdf">
                     <i class="fa-solid fa-file-pdf fa-lg"></i> Download Brochure (PDF)
                     <i class="fa-solid fa-arrow-down"></i>
                   </a>
@@ -970,11 +970,6 @@
           $(this).addClass('active');
 
           filterPortfolio(filterVal);
-        });
-        
-        // The brochure control remains visibly disabled until the approved PDF is supplied.
-        $('#downloadBrochureBtn').on('click', function(e){
-          e.preventDefault();
         });
         
         // Collage image lightbox alert

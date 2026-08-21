@@ -348,3 +348,11 @@
 .coming-soon-section:before {
 	background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.6) 100%) !important;
 }
+
+/* Keep the services heading on one line without overflowing narrow screens. */
+.marketing-services-title {
+    font-size: clamp(18px, 2.75vw, 44px);
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    white-space: nowrap;
+}
