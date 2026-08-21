@@ -511,6 +511,21 @@ NOTE: This file contains all scripts for the actual Template.
 			requestAnimationFrame(raf);
 		}
 		requestAnimationFrame(raf);
+
+		function handleDocumentVisibility() {
+			if (document.hidden) {
+				lenis.stop();
+				return;
+			}
+
+			lenis.start();
+			lenis.resize();
+			lenis.raf(performance.now());
+		}
+
+		document.addEventListener('visibilitychange', handleDocumentVisibility);
+		window.addEventListener('pagehide', function () { lenis.stop(); });
+		window.addEventListener('pageshow', handleDocumentVisibility);
 	}
 
 	POTENZA.lenisSmoothScroll2 = function () {
@@ -627,24 +642,42 @@ NOTE: This file contains all scripts for the actual Template.
 		Wow animation
 	*************************/
 	POTENZA.wow = function () {
-		if($('.wow').length){
+		if($('.wow').length && !window.__fortechWowInitialized){
+			window.__fortechWowInitialized = true;
+
+			function stabilizeAnimation(el) {
+				el.classList.add('wow-animated', 'animation-stable');
+			}
+
 			var wow = new WOW(
 				{
 				boxClass:     'wow',      // animated element css class (default is wow)
 				animateClass: 'animated', // animation css class (default is animated)
 				offset:       100,          // distance to the element when triggering the animation (default is 0)
 				mobile:       true,       // trigger animations on mobile devices (default is true)
-				live:         true       // act on asynchronously loaded content (default is true)
+				live:         false,     // all animated elements are present in the static markup
+				resetAnimation: false    // keep the completed state instead of re-applying it
 				}
 			);
 			wow.init();
 
 			document.querySelectorAll('.wow').forEach(function(el) {
-				el.addEventListener('animationend', function() {
-					// Ensure that the 'animated' class remains
-					el.classList.add('wow-animated');
+				el.addEventListener('animationend', function(event) {
+					if (event.target === el) stabilizeAnimation(el);
+				});
+				el.addEventListener('transitionend', function(event) {
+					if (event.target === el) stabilizeAnimation(el);
 				});
 			});
+
+			function finalizeRunningAnimations() {
+				document.querySelectorAll('.wow.animated').forEach(stabilizeAnimation);
+			}
+
+			document.addEventListener('visibilitychange', function () {
+				if (document.hidden) finalizeRunningAnimations();
+			});
+			window.addEventListener('pagehide', finalizeRunningAnimations);
 		}
 	};
 	 

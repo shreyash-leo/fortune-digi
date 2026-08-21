@@ -492,10 +492,51 @@ button.download-brochure-btn {
 .contact-form-status.is-success { color: #75dc9b; }
 
 /* Production responsive safeguards */
-img,
+img {
+    max-width: 100%;
+    height: auto;
+}
+
 video,
 iframe {
     max-width: 100%;
+}
+
+.video-wrapper video {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.service-item .service-icon {
+    width: 75px;
+    height: 75px;
+    flex: 0 0 75px;
+}
+
+.service-item .service-icon .main-icon,
+.service-item .service-icon .hover-icon {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* Keep only animations that have already run in their final painted state. */
+.wow.animation-stable {
+    visibility: visible !important;
+    opacity: 1 !important;
+    transform: none !important;
+    animation: none !important;
+}
+
+.wow.animation-stable.pgsUpToDown,
+.wow.animation-stable.pgsDownToUP,
+.wow.animation-stable.pgsLeftToRight,
+.wow.animation-stable.pgsRightToLeft {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%) !important;
+    transition: none !important;
 }
 
 .main-menu-offcanvas .navbar-nav .nav-item.active > .nav-link {
