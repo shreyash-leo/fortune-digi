@@ -6,6 +6,7 @@
 		<meta name="description" content="Fortech Media and Marketing Pvt Ltd is Nashik's full-service creative marketing agency — offering branding, social media marketing, video production, graphic design, and website development.">
 		<meta name="author" content="Fortech Media and Marketing Pvt Ltd">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<link rel="preload" as="image" href="images/banner/banner-01/banner-img-1.webp" fetchpriority="high">
 		<title>Fortech Media and Marketing | Creative Marketing Agency in Nashik</title>
 		
 		<!-- Favicon -->
@@ -23,7 +24,6 @@
 		<link rel="stylesheet" href="css/swiper/swiper.min.css">
 		<link rel="stylesheet" href="css/animate/animate.min.css">
 		<link rel="stylesheet" href="css/magnific-popup/magnific-popup.css">
-		<link rel="stylesheet" href="css/slideshow/subtle-slideshow.css">
 
 		<!-- Template Style -->
 		<link rel="stylesheet" href="css/style.css">
@@ -47,7 +47,7 @@
 				<nav class="navbar navbar-static-top navbar-expand-lg">
 						<a class="navbar-brand" href="index.html">
     <img class="navbar-logo"
-         src="images/Logo with name (White).webp"
+         src="images/fortech-logo-white.webp"
          alt="Fortech Media and Marketing Pvt Ltd">
 </a>
 
@@ -125,10 +125,7 @@
 									<a class="nav-link" href="about-us.html" aria-expanded="false">About Us</a>
 								</li>
 								<li class="nav-item ">
-									<a class="nav-link " href="coming-soon.html" aria-expanded="false">Pricing</a>
-								</li>
-								<li class="nav-item">
-									<a class="nav-link" href="coming-soon.html" aria-expanded="false">Careers</a>
+					<a class="nav-link " href="service.html" aria-expanded="false">Services</a>
 								</li>
 								<li class="nav-item">
 									<a class="nav-link" href="our-work.html" aria-expanded="false">Our work</a>
@@ -168,8 +165,8 @@
 				<div class="offcanvas-body lenis-scroll-disable">
 					<div class="sidebar-menu h-100 d-flex flex-column">
 						<div class="about-us-box">
-							<h5 class="title">Scalable Business for Startups</h5>
-							<p>Get the oars in the water and start rowing. Execution is the single biggest factor in achievement so the faster and better your execution.</p>
+							<h5 class="title">Creative Strategy That Moves Brands Forward</h5>
+							<p>Fortech brings strategy, design, media production, and technology together to help ambitious brands grow with clarity and measurable impact.</p>
 						</div>
 
 						<div class="widget-social">
@@ -236,8 +233,8 @@
 					<div class="main-banner main-banner-1 rounded-section">
 
 							<div id="bg-slider">
-								<img src="images/banner/banner-01/banner-img-1.webp" alt="Fortech Media and Marketing creative campaign showcase - Nashik">
-								<img src="images/banner/banner-01/banner-img-2.webp" alt="Fortech Media and Marketing branding and video production work">
+								<img src="images/banner/banner-01/banner-img-1.webp" alt="Fortech Media and Marketing creative campaign showcase - Nashik" fetchpriority="high" decoding="async">
+								<img src="images/banner/banner-01/banner-img-2.webp" alt="Fortech Media and Marketing branding and video production work" loading="eager" decoding="async">
 							</div>
 
 							<div class="widget-social vertical">
@@ -639,9 +636,10 @@
 															<button type="submit" class="btn btn-dark">Send Message 
 																<svg fill="#ffffff" width="18px" height="18px" viewBox="0 0 32 32" version="1.1">
 																	<path d="M30.713 16.090c0.009-0.041 0.014-0.087 0.014-0.135 0-0.004-0-0.008-0-0.011v0.001c-0.006-0.184-0.079-0.35-0.196-0.475l0 0-10-10c-0.136-0.135-0.323-0.218-0.529-0.218-0.415 0-0.751 0.336-0.751 0.751 0 0.206 0.083 0.393 0.218 0.528l8.721 8.72h-26.189c-0.414 0-0.75 0.336-0.75 0.75s0.336 0.75 0.75 0.75v0h26.188l-8.72 8.719c-0.136 0.136-0.22 0.324-0.22 0.531 0 0.415 0.336 0.751 0.751 0.751 0.207 0 0.395-0.084 0.531-0.22l10-10.001c0.025-0.026 0.017-0.064 0.038-0.093 0.040-0.052 0.098-0.088 0.124-0.151 0.013-0.050 0.020-0.108 0.020-0.167 0-0.011-0-0.021-0.001-0.032l0 0.002z"></path>
-																</svg>
-															</button>
-														</div>
+																	</svg>
+																</button>
+																<div id="contactFormStatus" class="contact-form-status" role="status" aria-live="polite"></div>
+															</div>
 													</div>
 												</form>
 											</div>
@@ -731,7 +729,7 @@
 						<div class="grid-wrapper grid-xl-4 grid-md-2 grid-xs-1">
 							<div class="item">
 								<a class="footer-logo" href="index.html">
-									<img class="img-fluid" src="images/Logo with name (White).webp" alt="Fortech Media and Marketing Pvt Ltd">
+									<img class="img-fluid" src="images/fortech-logo-white.webp" alt="Fortech Media and Marketing Pvt Ltd">
 								</a>
 							</div>
 
@@ -854,68 +852,10 @@
 		<script src="js/magnific-popup/jquery.magnific-popup.js"></script>
 		<script src="js/counter/jquery.countTo.js"></script>
 		<script src="js/gsap.min.js"></script>
-		<script src="js/slideshow/jquery.velocity.min.js"></script>
-		<script src="js/slideshow/jquery.kenburnsy.js"></script>
 		<script src="js/lenis.min.js"></script>
 		<!-- Template Scripts (Do not remove)-->
 		<script src="js/custom.js"></script>
-
-<script>
-
-const form = document.getElementById("contactForm");
-
-form.addEventListener("submit", async function(e) {
-
-    e.preventDefault();
-
-    const firstName = document.getElementById("firstName").value;
-    const email = document.getElementById("email").value;
-    const subject = document.getElementById("subject").value;
-    const message = document.getElementById("message").value;
-
-    try {
-
-        const response = await fetch("https://api.fortunedigi.com/api/contact", {
-
-            method: "POST",
-
-            headers: {
-                "Content-Type": "application/json"
-            },
-
-            body: JSON.stringify({
-                firstName,
-                lastName: "-",
-                email,
-                phone: "-",
-                message: `Subject: ${subject}\n\n${message}`
-            })
-
-        });
-
-        const data = await response.json();
-
-        if(data.success) {
-
-            alert("Message Sent Successfully");
-
-            form.reset();
-
-        } else {
-
-            alert(data.message);
-        }
-
-    } catch(error) {
-
-        console.log(error);
-
-        alert("Something went wrong");
-    }
-
-});
-
-</script>
+		<script src="js/site.js"></script>
 
 </body>
 </html>

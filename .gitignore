@@ -1,0 +1,4 @@
+.DS_Store
+*.log
+fortune-backend/.env
+fortune-backend/node_modules/

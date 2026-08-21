@@ -287,7 +287,7 @@
                 <nav class="navbar navbar-static-top navbar-expand-lg">
                         <a class="navbar-brand" href="index.html">
              <img class="navbar-logo"
-                  src="images/Logo with name (White).webp"
+                  src="images/fortech-logo-white.webp"
                   alt="Fortech Media and Marketing Pvt Ltd">
                         </a>
                         <div class="navbar-collapse collapse">
@@ -336,7 +336,7 @@
 
             <div class="offcanvas main-menu-offcanvas offcanvas-end" tabindex="-1" id="menuOffcanvas">
                 <div class="offcanvas-header"><h5 class="offcanvas-title">Main Menu</h5><button type="button" class="btn-close" data-bs-dismiss="offcanvas"><i class="fa-solid fa-xmark"></i></button></div>
-                <div class="offcanvas-body"><div class="body-inner"><nav class="navbar"><ul class="navbar-nav"><li class="nav-item"><a class="nav-link" href="index.html">Home</a></li><li class="nav-item"><a class="nav-link" href="about-us.html">About Us</a></li><li class="nav-item"><a class="nav-link" href="coming-soon.html">Pricing</a></li><li class="nav-item"><a class="nav-link" href="coming-soon.html">Careers</a></li><li class="nav-item active"><a class="nav-link" href="our-work.html">Our Work</a></li><li class="nav-item"><a class="nav-link" href="contact-us.html">Contact</a></li></ul></nav></div></div>
+                <div class="offcanvas-body"><div class="body-inner"><nav class="navbar"><ul class="navbar-nav"><li class="nav-item"><a class="nav-link" href="index.html">Home</a></li><li class="nav-item"><a class="nav-link" href="about-us.html">About Us</a></li><li class="nav-item"><a class="nav-link" href="service.html">Services</a></li><li class="nav-item active"><a class="nav-link" href="our-work.html">Our Work</a></li><li class="nav-item"><a class="nav-link" href="contact-us.html">Contact</a></li></ul></nav></div></div>
             </div>
       
             <!--=================================
@@ -350,8 +350,8 @@
                 <div class="offcanvas-body lenis-scroll-disable">
                     <div class="sidebar-menu h-100 d-flex flex-column">
                         <div class="about-us-box">
-                            <h5 class="title">Scalable Business for Startups</h5>
-                            <p>Get the oars in the water and start rowing. Execution is the single biggest factor in achievement so the faster and better your execution.</p>
+                            <h5 class="title">Creative Strategy That Moves Brands Forward</h5>
+                            <p>Fortech brings strategy, design, media production, and technology together to help ambitious brands grow with clarity and measurable impact.</p>
                         </div>
 
                         <div class="widget-social">
@@ -424,10 +424,10 @@
                     <h2 class="title">Explore Our Complete Capabilities</h2>
                     <p>Download our detailed brochure to see the full spectrum of services, case studies, and creative approach. Everything you need to know about partnering with Fortech Media and Marketing.</p>
                   </div>
-                  <a href="documents/Fortech-Business-Profile.pdf" class="download-brochure-btn wow fadeInUp" id="downloadBrochureBtn" download="Fortech-Business-Profile.pdf">
+                  <button type="button" class="download-brochure-btn wow fadeInUp" id="downloadBrochureBtn" data-bs-toggle="modal" data-bs-target="#brochureModal">
                     <i class="fa-solid fa-file-pdf fa-lg"></i> Download Brochure (PDF)
                     <i class="fa-solid fa-arrow-down"></i>
-                  </a>
+                  </button>
                 </div>
                 <div class="col-lg-4 mt-4 mt-lg-0 text-center">
                   <div class="bg-dark p-4 rounded-4 text-center border border-red" style="border-width: 1px !important;">
@@ -439,6 +439,68 @@
               </div>
             </div>
           </section>
+
+          <div class="modal fade brochure-modal" id="brochureModal" tabindex="-1" aria-labelledby="brochureModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <div>
+                    <span class="sub-title">[ Download Brochure ]</span>
+                    <h3 class="modal-title" id="brochureModalLabel">Tell us where to send your copy</h3>
+                  </div>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <form id="brochureForm" novalidate>
+                  <div class="modal-body">
+                    <p class="brochure-form-intro">Complete the short form and your Fortech business profile will download immediately.</p>
+                    <div class="row g-3">
+                      <div class="col-sm-6">
+                        <label class="form-label" for="brochureFirstName">First name</label>
+                        <input class="form-control" id="brochureFirstName" name="firstName" type="text" autocomplete="given-name" required maxlength="60">
+                        <div class="invalid-feedback">Please enter your first name.</div>
+                      </div>
+                      <div class="col-sm-6">
+                        <label class="form-label" for="brochureLastName">Last name</label>
+                        <input class="form-control" id="brochureLastName" name="lastName" type="text" autocomplete="family-name" required maxlength="60">
+                        <div class="invalid-feedback">Please enter your last name.</div>
+                      </div>
+                      <div class="col-12">
+                        <label class="form-label" for="brochureEmail">Business email</label>
+                        <input class="form-control" id="brochureEmail" name="email" type="email" autocomplete="email" required maxlength="120">
+                        <div class="invalid-feedback">Please enter a valid email address.</div>
+                      </div>
+                      <div class="col-sm-6">
+                        <label class="form-label" for="brochurePhone">Phone number</label>
+                        <input class="form-control" id="brochurePhone" name="phone" type="tel" autocomplete="tel" required pattern="[0-9+() -]{7,20}" maxlength="20">
+                        <div class="invalid-feedback">Please enter a valid phone number.</div>
+                      </div>
+                      <div class="col-sm-6">
+                        <label class="form-label" for="brochureCompany">Company</label>
+                        <input class="form-control" id="brochureCompany" name="company" type="text" autocomplete="organization" required maxlength="100">
+                        <div class="invalid-feedback">Please enter your company name.</div>
+                      </div>
+                      <div class="visually-hidden" aria-hidden="true">
+                        <label for="brochureWebsite">Website</label>
+                        <input id="brochureWebsite" name="website" type="text" tabindex="-1" autocomplete="off">
+                      </div>
+                      <div class="col-12">
+                        <div class="form-check">
+                          <input class="form-check-input" id="brochureConsent" name="consent" type="checkbox" value="yes" required>
+                          <label class="form-check-label" for="brochureConsent">I agree that Fortech may contact me about its services.</label>
+                          <div class="invalid-feedback">Please provide consent to continue.</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="brochure-form-status" id="brochureFormStatus" role="status" aria-live="polite"></div>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-link" data-bs-dismiss="modal">Cancel</button>
+                    <button type="submit" class="btn">Submit & Download <i class="fa-solid fa-arrow-down"></i></button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
 
           <!-- PORTFOLIO SHOWCASE WITH CUSTOM FILTERS: Branding, Websites, Reels, Videos, Logos, Graphics -->
           <section class="space-pb">
@@ -739,13 +801,13 @@
                 <div class="portfolio-item" data-category="logos">
                   <div class="portfolio-card">
                     <div class="portfolio-media logo-media">
-                      <img class="portfolio-logo" src="images/logos/logo1.webp" alt="Confidential client logo design by Fortech Media and Marketing">
+                      <img class="portfolio-logo" src="images/logos/logo1.webp" alt="SSE Workforce Services Pvt Ltd logo">
                       <span class="media-badge"><i class="fa-regular fa-registered"></i> Logo</span>
                       <div class="portfolio-overlay">
                         <div class="portfolio-info">
-                          <span class="portfolio-category">Logo Design</span>
-                          <h4 class="portfolio-title">Confidential Client</h4>
-                          <p class="portfolio-desc">Logo identity designed by Fortech Media and Marketing.</p>
+                          <span class="portfolio-category">Workforce Services</span>
+                          <h4 class="portfolio-title">SSE Workforce Services Pvt Ltd</h4>
+                          <p class="portfolio-desc">A people-first identity that communicates teamwork, leadership, and dependable workforce support.</p>
                         </div>
                       </div>
                     </div>
@@ -755,13 +817,13 @@
                 <div class="portfolio-item" data-category="logos">
                   <div class="portfolio-card">
                     <div class="portfolio-media logo-media">
-                      <img class="portfolio-logo" src="images/logos/logo2.webp" alt="Confidential client logo design by Fortech Media and Marketing">
+                      <img class="portfolio-logo" src="images/logos/logo2.webp" alt="Seveiarth Packaging Pvt Ltd logo">
                       <span class="media-badge"><i class="fa-regular fa-registered"></i> Logo</span>
                       <div class="portfolio-overlay">
                         <div class="portfolio-info">
-                          <span class="portfolio-category">Logo Design</span>
-                          <h4 class="portfolio-title">Confidential Client</h4>
-                          <p class="portfolio-desc">Logo identity designed by Fortech Media and Marketing.</p>
+                          <span class="portfolio-category">Packaging</span>
+                          <h4 class="portfolio-title">Seveiarth Packaging Pvt Ltd</h4>
+                          <p class="portfolio-desc">Interlocking green forms create a modern packaging mark centred on protection, efficiency, and sustainability.</p>
                         </div>
                       </div>
                     </div>
@@ -771,13 +833,13 @@
                 <div class="portfolio-item" data-category="logos">
                   <div class="portfolio-card">
                     <div class="portfolio-media logo-media">
-                      <img class="portfolio-logo" src="images/logos/logo3.webp" alt="Confidential client logo design by Fortech Media and Marketing">
+                      <img class="portfolio-logo" src="images/logos/logo3.webp" alt="Platinum Manpower and Facility Management Services logo">
                       <span class="media-badge"><i class="fa-regular fa-registered"></i> Logo</span>
                       <div class="portfolio-overlay">
                         <div class="portfolio-info">
-                          <span class="portfolio-category">Logo Design</span>
-                          <h4 class="portfolio-title">Confidential Client</h4>
-                          <p class="portfolio-desc">Logo identity designed by Fortech Media and Marketing.</p>
+                          <span class="portfolio-category">Facility Management</span>
+                          <h4 class="portfolio-title">Platinum Manpower & Facility Management</h4>
+                          <p class="portfolio-desc">A connected human symbol built to express organised teams, reliable service, and professional facility care.</p>
                         </div>
                       </div>
                     </div>
@@ -787,13 +849,13 @@
                 <div class="portfolio-item" data-category="logos">
                   <div class="portfolio-card">
                     <div class="portfolio-media logo-media">
-                      <img class="portfolio-logo" src="images/logos/logo4.webp" alt="Confidential client logo design by Fortech Media and Marketing">
+                      <img class="portfolio-logo" src="images/logos/logo4.webp" alt="Nobelcrest Properties LLP logo">
                       <span class="media-badge"><i class="fa-regular fa-registered"></i> Logo</span>
                       <div class="portfolio-overlay">
                         <div class="portfolio-info">
-                          <span class="portfolio-category">Logo Design</span>
-                          <h4 class="portfolio-title">Confidential Client</h4>
-                          <p class="portfolio-desc">Logo identity designed by Fortech Media and Marketing.</p>
+                          <span class="portfolio-category">Real Estate</span>
+                          <h4 class="portfolio-title">Nobelcrest Properties LLP</h4>
+                          <p class="portfolio-desc">A premium gold skyline identity designed to convey architectural ambition, trust, and elevated living.</p>
                         </div>
                       </div>
                     </div>
@@ -803,13 +865,13 @@
                 <div class="portfolio-item" data-category="logos">
                   <div class="portfolio-card">
                     <div class="portfolio-media logo-media">
-                      <img class="portfolio-logo" src="images/logos/logo5.webp" alt="Confidential client logo design by Fortech Media and Marketing">
+                      <img class="portfolio-logo" src="images/logos/logo5.webp" alt="Gomata logo with Vision to Build Dreams tagline">
                       <span class="media-badge"><i class="fa-regular fa-registered"></i> Logo</span>
                       <div class="portfolio-overlay">
                         <div class="portfolio-info">
-                          <span class="portfolio-category">Logo Design</span>
-                          <h4 class="portfolio-title">Confidential Client</h4>
-                          <p class="portfolio-desc">Logo identity designed by Fortech Media and Marketing.</p>
+                          <span class="portfolio-category">Corporate Identity</span>
+                          <h4 class="portfolio-title">Gomata</h4>
+                          <p class="portfolio-desc">A bold aspirational emblem combining a globe, sunrise, and wings to represent reach, progress, and vision.</p>
                         </div>
                       </div>
                     </div>
@@ -819,13 +881,13 @@
                 <div class="portfolio-item" data-category="logos">
                   <div class="portfolio-card">
                     <div class="portfolio-media logo-media">
-                      <img class="portfolio-logo" src="images/logos/logo6.webp" alt="Confidential client logo design by Fortech Media and Marketing">
+                      <img class="portfolio-logo" src="images/logos/logo6.webp" alt="Expeco Mart logo">
                       <span class="media-badge"><i class="fa-regular fa-registered"></i> Logo</span>
                       <div class="portfolio-overlay">
                         <div class="portfolio-info">
-                          <span class="portfolio-category">Logo Design</span>
-                          <h4 class="portfolio-title">Confidential Client</h4>
-                          <p class="portfolio-desc">Logo identity designed by Fortech Media and Marketing.</p>
+                          <span class="portfolio-category">Food & Agriculture Retail</span>
+                          <h4 class="portfolio-title">Expeco Mart</h4>
+                          <p class="portfolio-desc">An inclusive marketplace identity uniting dairy, poultry, grains, and seafood in one memorable farm-to-market badge.</p>
                         </div>
                       </div>
                     </div>
@@ -835,13 +897,13 @@
                 <div class="portfolio-item" data-category="logos">
                   <div class="portfolio-card">
                     <div class="portfolio-media logo-media">
-                      <img class="portfolio-logo" src="images/logos/logo7.webp" alt="Confidential client logo design by Fortech Media and Marketing">
+                      <img class="portfolio-logo" src="images/logos/logo7.webp" alt="Dr Amit Yeole Neuro Clinic logo">
                       <span class="media-badge"><i class="fa-regular fa-registered"></i> Logo</span>
                       <div class="portfolio-overlay">
                         <div class="portfolio-info">
-                          <span class="portfolio-category">Logo Design</span>
-                          <h4 class="portfolio-title">Confidential Client</h4>
-                          <p class="portfolio-desc">Logo identity designed by Fortech Media and Marketing.</p>
+                          <span class="portfolio-category">Healthcare</span>
+                          <h4 class="portfolio-title">Dr. Amit Yeole Neuro Clinic</h4>
+                          <p class="portfolio-desc">A clear neurological-care identity pairing the human profile with a connected brain network.</p>
                         </div>
                       </div>
                     </div>
@@ -851,13 +913,13 @@
                 <div class="portfolio-item" data-category="logos">
                   <div class="portfolio-card">
                     <div class="portfolio-media logo-media">
-                      <img class="portfolio-logo" src="images/logos/logo8.webp" alt="Confidential client logo design by Fortech Media and Marketing">
+                      <img class="portfolio-logo" src="images/logos/logo8.webp" alt="Belfry and Company cafe logo">
                       <span class="media-badge"><i class="fa-regular fa-registered"></i> Logo</span>
                       <div class="portfolio-overlay">
                         <div class="portfolio-info">
-                          <span class="portfolio-category">Logo Design</span>
-                          <h4 class="portfolio-title">Confidential Client</h4>
-                          <p class="portfolio-desc">Logo identity designed by Fortech Media and Marketing.</p>
+                          <span class="portfolio-category">Cafe & Entertainment</span>
+                          <h4 class="portfolio-title">Belfry & Co.</h4>
+                          <p class="portfolio-desc">A warm, character-led cafe identity that brings coffee, casual food, and games together.</p>
                         </div>
                       </div>
                     </div>
@@ -867,13 +929,13 @@
                 <div class="portfolio-item" data-category="logos">
                   <div class="portfolio-card">
                     <div class="portfolio-media logo-media">
-                      <img class="portfolio-logo" src="images/logos/logo9.webp" alt="Confidential client logo design by Fortech Media and Marketing">
+                      <img class="portfolio-logo" src="images/logos/logo9.webp" alt="ClinRT logo with Technology Delivered Trials Transformed tagline">
                       <span class="media-badge"><i class="fa-regular fa-registered"></i> Logo</span>
                       <div class="portfolio-overlay">
                         <div class="portfolio-info">
-                          <span class="portfolio-category">Logo Design</span>
-                          <h4 class="portfolio-title">Confidential Client</h4>
-                          <p class="portfolio-desc">Logo identity designed by Fortech Media and Marketing.</p>
+                          <span class="portfolio-category">Clinical Research Technology</span>
+                          <h4 class="portfolio-title">ClinRT</h4>
+                          <p class="portfolio-desc">A precise, modern identity created for technology that streamlines clinical research and transforms trial delivery.</p>
                         </div>
                       </div>
                     </div>
@@ -892,7 +954,7 @@
                 <div class="footer-main">
                     <div class="container">
                         <div class="grid-wrapper grid-xl-4 grid-md-2 grid-xs-1">
-                            <div class="item"><a class="footer-logo" href="index.html"><img class="img-fluid" src="images/Logo with name (White).webp" alt="Fortech Media and Marketing Pvt Ltd"></a></div>
+                            <div class="item"><a class="footer-logo" href="index.html"><img class="img-fluid" src="images/fortech-logo-white.webp" alt="Fortech Media and Marketing Pvt Ltd"></a></div>
                             <div class="item"><div class="widget"><h5 class="widget-title">Office</h5></div><div class="contact-info-box"><ul><li><a href="mailto:fortechmediaandmarketing@gmail.com">fortechmediaandmarketing@gmail.com</a></li><li><a href="tel:+917977186529">+91 7977186529</a></li><li>Plot no. 2, Bank of India Colony, Pujya Sri Sri Ravishankar Marg, Behind KK Wagh School, Nashik 422006, Maharashtra, India</li></ul></div></div>
                             <div class="item"><div class="widget-menu"><h5 class="widget-title">Quick Links</h5><ul><li><a href="index.html">Home</a></li><li><a href="about-us.html">About Us</a></li><li><a href="service.html">Services</a></li><li><a href="our-work.html">Our Work</a></li><li><a href="contact-us.html">Contact</a></li></ul></div></div>
                             <div class="item"><div class="widget widget-newsletter"><h5 class="widget-title">Get In Touch</h5><div class="newsletter-description">Have a project in mind? Let’s connect.</div><a href="contact-us.html" class="get-in-touch-btn">Get In Touch <svg fill="#ffffff" width="18px" height="18px" viewBox="0 0 32 32"><path d="M30.713 16.090c0.009-0.041 0.014-0.087 0.014-0.135 0-0.004-0-0.008-0-0.011v0.001c-0.006-0.184-0.079-0.35-0.196-0.475l0 0-10-10c-0.136-0.135-0.323-0.218-0.529-0.218-0.415 0-0.751 0.336-0.751 0.751 0 0.206 0.083 0.393 0.218 0.528l8.721 8.72h-26.189c-0.414 0-0.75 0.336-0.75 0.75s0.336 0.75 0.75 0.75v0h26.188l-8.72 8.719c-0.136 0.136-0.22 0.324-0.22 0.531 0 0.415 0.336 0.751 0.751 0.751 0.207 0 0.395-0.084 0.531-0.22l10-10.001c0.025-0.026 0.017-0.064 0.038-0.093 0.040-0.052 0.098-0.088 0.124-0.151 0.013-0.050 0.020-0.108 0.020-0.167 0-0.011-0-0.021-0.001-0.032l0 0.002z"></path></svg></a></div></div>
@@ -920,6 +982,7 @@
     <script src="js/gsap.min.js"></script>
     <script src="js/lenis.min.js"></script>
     <script src="js/custom.js"></script>
+    <script src="js/site.js"></script>
     
     <script>
       $(document).ready(function(){

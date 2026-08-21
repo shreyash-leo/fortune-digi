@@ -259,10 +259,7 @@ NOTE: This file contains all scripts for the actual Template.
 	POTENZA.bgSlider = function () {
 		var $bgSlider = $('#bg-slider');
 		if ( $bgSlider.exists() ) {
-			$("#bg-slider").kenburnsy({
-				fullscreen: false,
-				height: '100%'
-			});
+			$bgSlider.addClass('stable-banner-slider');
 		}
 	}
 
@@ -362,8 +359,8 @@ NOTE: This file contains all scripts for the actual Template.
 					$(this).removeClass('open');
 				}
 			});
-			//Do not include! This prevents the form from submitting for DEMO purposes only!
-			$('form').submit(function(event) {
+			// Search is a visual overlay only; do not block the website's real forms.
+			$('#search > .search-inner > form').submit(function(event) {
 				event.preventDefault();
 				return false;
 			})
