@@ -24,14 +24,14 @@ Set `SKIP_EMAIL=true` only for local API testing. Keep it `false` in production.
 4. Create `.env` from `.env.example`. Use a Google App Password, never a normal Gmail password.
 5. Set `ALLOWED_ORIGINS` to the exact public website origins.
 6. Start the API with `pm2 start server.js --name fortech-api` and save it with `pm2 save`.
-7. Serve the repository root from the main domain and reverse-proxy `api.fortunedigi.com` to `127.0.0.1:8000`.
+7. Serve the repository root from the main domain and reverse-proxy `api.fortechmedia.com` to `127.0.0.1:8000`.
 8. Enable HTTPS for both hosts with Certbot and redirect HTTP to HTTPS.
 
 Example API proxy block:
 
 ```nginx
 server {
-    server_name api.fortunedigi.com;
+    server_name api.fortechmedia.com;
 
     location / {
         proxy_pass http://127.0.0.1:8000;
@@ -46,7 +46,7 @@ server {
 
 Before launch, confirm:
 
-- `https://api.fortunedigi.com/health` returns a successful JSON response.
+- `https://api.fortechmedia.com/health` returns a successful JSON response.
 - Contact forms deliver email.
 - The brochure downloads only after the brochure form succeeds.
 - Both domains have valid HTTPS certificates.

@@ -4,7 +4,7 @@
   var localHosts = ["localhost", "127.0.0.1", "::1"];
   var apiBase = localHosts.indexOf(window.location.hostname) !== -1
     ? "http://127.0.0.1:8000"
-    : "https://api.fortunedigi.com";
+    : "https://api.fortechmedia.com";
 
   function createContinuousMarquee() {
     document.querySelectorAll(".continuous-marquee .marquee-inner").forEach(function (track) {
