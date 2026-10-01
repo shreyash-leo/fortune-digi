@@ -24,7 +24,7 @@ Set `SKIP_EMAIL=true` only for local API testing. Keep it `false` in production.
 4. Create `.env` from `.env.example`. Use a Google App Password, never a normal Gmail password.
 5. Set `ALLOWED_ORIGINS` to the exact public website origins.
 6. Start the API with `pm2 start server.js --name fortech-api` and save it with `pm2 save`.
-7. Serve the repository root from the main domain and reverse-proxy `api.fortechmedia.com` to `127.0.0.1:8000`.
+7. Serve the repository root from the main domain and reverse-proxy `api.fortechmedia.com` to `127.0.0.1:8000`. Add `error_page 404 /404.html;` to the main-domain Nginx server block so missing URLs use the custom 404 page.
 8. Enable HTTPS for both hosts with Certbot and redirect HTTP to HTTPS.
 
 Example API proxy block:
