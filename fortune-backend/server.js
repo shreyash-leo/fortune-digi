@@ -11,7 +11,7 @@ app.set("trust proxy", 1);
 app.disable("x-powered-by");
 
 const allowedOrigins = (process.env.ALLOWED_ORIGINS ||
-    "https://fortunedigi.com,https://www.fortunedigi.com,http://127.0.0.1:5500,http://localhost:5500")
+    "https://fortechmedia.com,https://www.fortechmedia.com,https://fortunedigi.com,https://www.fortunedigi.com,http://127.0.0.1:5500,http://localhost:5500")
     .split(",")
     .map(origin => origin.trim())
     .filter(Boolean);
